@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/descriptionScanNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="@dimen/padding_large"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_small" />
+
+
+        <LinearLayout
+            style="@style/match_match"
+            android:layout_below="@+id/descriptionScanNumber"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvConvert"
+                style="@style/button_menu"
+                android:background="#2382c8"
+                android:text="Chuyển đổi đầu số" />
+
+            <TextView
+                android:id="@+id/tvRecover"
+                style="@style/button_menu"
+                android:background="#1fad7b"
+                android:text="Khôi phục đầu số" />
+
+            <TextView
+                android:id="@+id/tvConvertations"
+                style="@style/button_menu"
+                android:background="#1cc2d5"
+                android:text="Lịch chuyển đổi" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/lnRecovery"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/txt_recovery"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
+                    android:textSize="20.0dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvRecoveryContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/txt_recovery_content"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/txt_recovery_note"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/text_normal"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btnRecovery"
+                    android:layout_width="150.0dip"
+                    android:layout_height="45.0dip"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:layout_marginBottom="@dimen/padding_normal"
+                    android:background="@drawable/my_button"
+                    android:drawableLeft="@drawable/ic_restore_wrapped"
+                    android:text="@string/btn_recovery"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnLookup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnRecovery"
+                android:layout_marginTop="@dimen/padding_large"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    style="@style/wrap_wrap"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_search"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    style="@style/wrap_wrap"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:layout_marginTop="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:gravity="center"
+                    android:text="@string/description"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/wrap_wrap"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:layout_marginTop="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:gravity="center"
+                    android:text="@string/description1"
+                    android:textSize="@dimen/text_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:layout_marginTop="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:gravity="center"
+                    android:text="@string/description2"
+                    android:textSize="@dimen/text_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <Button
+                    android:id="@+id/btnInfo"
+                    android:layout_width="150.0dip"
+                    android:layout_height="45.0dip"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/padding_large_x1"
+                    android:layout_marginBottom="@dimen/padding_normal"
+                    android:background="@drawable/ic_lcd"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

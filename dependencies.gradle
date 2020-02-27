@@ -1,0 +1,24 @@
+
+ext {
+    retrofitVersion         = '2.4.0'
+    rxVersion               = '2.1.9'
+    rxAndroid               = '2.0.2'
+    okHttpVersion           = '3.9.0'
+
+
+    deps = [
+
+            /*Retrofit: https://github.com/square/retrofit*/
+            retrofit        :       "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitConvert :       "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitAdapter :       "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+            /*RxJava: https://github.com/ReactiveX/RxJava*/
+            rxjava          :       "io.reactivex.rxjava2:rxjava:$rxVersion",
+            /*RxAndroid:https://github.com/ReactiveX/RxAndroid*/
+            rxandroid       :       "io.reactivex.rxjava2:rxandroid:$rxAndroid",
+            /*OkHttp: http://square.github.io/okhttp/*/
+            okHttp          :       "com.squareup.okhttp3:okhttp:$okHttpVersion",
+            okHttpLogging   :       "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+
+    ]
+}

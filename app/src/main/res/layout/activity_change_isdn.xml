@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout style="@style/match_match">
+
+        <ImageView
+            style="@style/match_match"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:id="@+id/adsBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|bottom"
+            android:gravity="center"
+            android:orientation="vertical" />
+
+        <ViewAnimator
+            android:layout_above="@+id/adsBanner"
+            android:id="@+id/viewAnimator"
+            style="@style/match_match"
+            android:inAnimation="@anim/fade_in"
+            android:outAnimation="@anim/fade_out">
+
+            <include
+                android:id="@+id/viewResultScanning"
+                layout="@layout/view_result_scanning" />
+
+            <include
+                android:id="@+id/viewChanging"
+                layout="@layout/view_changing" />
+
+            <include
+                android:id="@+id/viewDone"
+                layout="@layout/view_done" />
+        </ViewAnimator>
+
+
+
+    </RelativeLayout>
+</layout>
